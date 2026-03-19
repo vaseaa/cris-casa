@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.LoginController">
+  <center>
+    <VBox spacing="12" alignment="CENTER">
+      <Label text="Autentificare POS" styleClass="title"/>
+      <TextField fx:id="username" promptText="Utilizator"/>
+      <PasswordField fx:id="password" promptText="Parola"/>
+      <Button text="Login" onAction="#login" styleClass="primary"/>
+    </VBox>
+  </center>
+</BorderPane>

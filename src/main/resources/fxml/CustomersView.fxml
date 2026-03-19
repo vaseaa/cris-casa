@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.CustomersController" spacing="8" padding="10">
+  <TableView fx:id="table" onMouseClicked="#loadSelected" prefHeight="300">
+    <columns>
+      <TableColumn text="ID" prefWidth="60"><cellValueFactory><PropertyValueFactory property="id"/></cellValueFactory></TableColumn>
+      <TableColumn text="Nume" prefWidth="220"><cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory></TableColumn>
+      <TableColumn text="Telefon" prefWidth="140"><cellValueFactory><PropertyValueFactory property="phone"/></cellValueFactory></TableColumn>
+      <TableColumn text="Email" prefWidth="180"><cellValueFactory><PropertyValueFactory property="email"/></cellValueFactory></TableColumn>
+      <TableColumn text="Puncte" prefWidth="80"><cellValueFactory><PropertyValueFactory property="loyaltyPoints"/></cellValueFactory></TableColumn>
+    </columns>
+  </TableView>
+
+  <GridPane hgap="8" vgap="8">
+    <Label text="Nume" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="name" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Telefon" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    <TextField fx:id="phone" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+    <Label text="Email" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="email" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Puncte" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+    <TextField fx:id="points" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+  </GridPane>
+
+  <HBox alignment="CENTER_RIGHT">
+    <Button text="Salveaza" onAction="#save" styleClass="primary"/>
+  </HBox>
+</VBox>

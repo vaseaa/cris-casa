@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.ReportsController" spacing="8" padding="10">
+  <HBox spacing="8">
+    <Button text="Sumar vanzari" onAction="#loadSales" styleClass="primary"/>
+    <Button text="Top produse" onAction="#loadTopProducts"/>
+    <Button text="Export" onAction="#export"/>
+  </HBox>
+  <TextArea fx:id="output" prefHeight="400"/>
+</VBox>

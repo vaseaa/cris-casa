@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.MainController">
+  <center>
+    <TabPane>
+      <tabs>
+        <Tab text="Produse">
+          <content>
+            <fx:include fx:id="productsController" source="ProductsView.fxml"/>
+          </content>
+        </Tab>
+        <Tab text="Cos">
+          <content>
+            <fx:include fx:id="cartController" source="CartView.fxml"/>
+          </content>
+        </Tab>
+        <Tab text="Clienti">
+          <content>
+            <fx:include fx:id="customersController" source="CustomersView.fxml"/>
+          </content>
+        </Tab>
+        <Tab text="Rapoarte">
+          <content>
+            <fx:include fx:id="reportsController" source="ReportsView.fxml"/>
+          </content>
+        </Tab>
+        <Tab text="Setari">
+          <content>
+            <fx:include fx:id="settingsController" source="SettingsView.fxml"/>
+          </content>
+        </Tab>
+      </tabs>
+    </TabPane>
+  </center>
+</BorderPane>

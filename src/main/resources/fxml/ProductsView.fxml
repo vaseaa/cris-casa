@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.ProductsController" spacing="8" padding="10">
+  <TableView fx:id="table" onMouseClicked="#loadSelected" prefHeight="300">
+    <columns>
+      <TableColumn text="ID" prefWidth="60">
+        <cellValueFactory>
+          <PropertyValueFactory property="id"/>
+        </cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Nume" prefWidth="220">
+        <cellValueFactory><PropertyValueFactory property="name"/></cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Cod" prefWidth="140">
+        <cellValueFactory><PropertyValueFactory property="barcode"/></cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Pret" prefWidth="80">
+        <cellValueFactory><PropertyValueFactory property="price"/></cellValueFactory>
+      </TableColumn>
+      <TableColumn text="TVA" prefWidth="60">
+        <cellValueFactory><PropertyValueFactory property="vat"/></cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Stoc" prefWidth="80">
+        <cellValueFactory><PropertyValueFactory property="stock"/></cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+  <GridPane hgap="8" vgap="8">
+    <Label text="Nume" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="name" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Barcode" GridPane.rowIndex="0" GridPane.columnIndex="2"/>
+    <TextField fx:id="barcode" GridPane.rowIndex="0" GridPane.columnIndex="3"/>
+
+    <Label text="Categorie ID" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="categoryId" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+    <Label text="Pret" GridPane.rowIndex="1" GridPane.columnIndex="2"/>
+    <TextField fx:id="price" GridPane.rowIndex="1" GridPane.columnIndex="3"/>
+
+    <Label text="TVA" GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+    <TextField fx:id="vat" GridPane.rowIndex="2" GridPane.columnIndex="1"/>
+    <Label text="Stoc" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+    <TextField fx:id="stock" GridPane.rowIndex="2" GridPane.columnIndex="3"/>
+  </GridPane>
+
+  <HBox spacing="8" alignment="CENTER_RIGHT">
+    <CheckBox fx:id="active" text="Activ"/>
+    <Button text="Salveaza" onAction="#save" styleClass="primary"/>
+  </HBox>
+</VBox>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.SettingsController" spacing="8" padding="10">
+  <GridPane hgap="8" vgap="8">
+    <Label text="Nume magazin" GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+    <TextField fx:id="storeName" GridPane.rowIndex="0" GridPane.columnIndex="1"/>
+    <Label text="Moneda" GridPane.rowIndex="1" GridPane.columnIndex="0"/>
+    <TextField fx:id="currency" GridPane.rowIndex="1" GridPane.columnIndex="1"/>
+  </GridPane>
+  <HBox alignment="CENTER_RIGHT">
+    <Button text="Salveaza" onAction="#save" styleClass="primary"/>
+  </HBox>
+</VBox>

@@ -1,0 +1,26 @@
+.root {
+  -fx-font-family: "Segoe UI";
+  -fx-base: #f7f7f7;
+  -fx-background-color: #f7f7f7;
+}
+
+.label.title {
+  -fx-font-size: 22px;
+  -fx-font-weight: bold;
+}
+
+.button.primary {
+  -fx-background-color: #1f3b73;
+  -fx-text-fill: white;
+  -fx-font-weight: bold;
+}
+
+.table-view {
+  -fx-background-color: white;
+  -fx-border-color: #e0e0e0;
+}
+
+.text-field, .password-field, .combo-box {
+  -fx-background-color: white;
+  -fx-border-color: #d0d0d0;
+}

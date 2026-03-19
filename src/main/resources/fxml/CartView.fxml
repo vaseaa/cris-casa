@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.uni.pos.ui.CartController" spacing="8" padding="10">
+  <HBox spacing="8">
+    <TextField fx:id="barcode" promptText="Barcode"/>
+    <Button text="Adauga" onAction="#addByBarcode" styleClass="primary"/>
+  </HBox>
+
+  <TableView fx:id="cartTable" prefHeight="300">
+    <columns>
+      <TableColumn text="Produs" prefWidth="250">
+        <cellValueFactory><PropertyValueFactory property="product"/></cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Cant" prefWidth="70">
+        <cellValueFactory><PropertyValueFactory property="qty"/></cellValueFactory>
+      </TableColumn>
+      <TableColumn text="Reducere" prefWidth="90">
+        <cellValueFactory><PropertyValueFactory property="discount"/></cellValueFactory>
+      </TableColumn>
+    </columns>
+  </TableView>
+
+  <HBox spacing="12">
+    <Label text="Total:"/>
+    <Label fx:id="total"/>
+    <Label text="TVA:"/>
+    <Label fx:id="vat"/>
+    <Label text="Reducere:"/>
+    <Label fx:id="discount"/>
+  </HBox>
+
+  <HBox spacing="8">
+    <ComboBox fx:id="customer" promptText="Client"/>
+    <ComboBox fx:id="payment" promptText="Metoda"/>
+    <TextField fx:id="cash" promptText="Cash primit"/>
+  </HBox>
+
+  <HBox spacing="8" alignment="CENTER_RIGHT">
+    <Button text="Reducere linie" onAction="#applyDiscount"/>
+    <Button text="Sterge" onAction="#removeSelected"/>
+    <Button text="Finalizeaza" onAction="#finalizeSale" styleClass="primary"/>
+  </HBox>
+</VBox>
